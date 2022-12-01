@@ -10,7 +10,7 @@ app.use(require('./routes/players'));
 const dbo = require('./db/conn');
 const { setInternalBufferSize } = require('bson');
 
-app.listen(port, () =>{
+app.listen(PORT, () =>{
     dbo.connectToServer(function(err){
         if(err) console.log(err);
     })
